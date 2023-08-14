@@ -29,7 +29,7 @@ having count = ?;
 select * from users;
 select * from messages;
 
-select u.id, u.firstname, u.lastname, m.id as 'отправленное сообщение', (select firstname from users )
+select u.id, u.firstname, u.lastname, m.id as 'отправленное сообщение'
 from users as u
 left join messages as m
 on u.id = m.from_user_id
